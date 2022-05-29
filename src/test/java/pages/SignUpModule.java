@@ -23,6 +23,9 @@ public class SignUpModule {
     @FindBy(xpath = "(//button)[1]")
     public WebElement login;
 
+    @FindBy(xpath = "//p[text()='Your email or password is incorrect!']")
+    public WebElement loginerror;
+
 
 
 
