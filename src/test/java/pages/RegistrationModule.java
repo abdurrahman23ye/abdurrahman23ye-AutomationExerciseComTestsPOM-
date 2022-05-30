@@ -54,10 +54,11 @@ public class RegistrationModule {
     @FindBy(xpath = "//b")
     public WebElement loggedName;
 
- @FindBy(xpath = "//a[@href='/logout']")
- public WebElement logOut;
+    @FindBy(xpath = "//a[@href='/logout']")
+    public WebElement logOut;
 
-
+    @FindBy(xpath = "//p[text()='Email Address already exist!']")
+    public WebElement emailAlreadyExist;
 
     @FindBy(xpath = "//a[@href='/delete_account']")
     public WebElement deleteAccount;
