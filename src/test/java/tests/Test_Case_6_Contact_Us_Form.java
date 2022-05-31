@@ -15,7 +15,6 @@ public class Test_Case_6_Contact_Us_Form {
     @Test
     public static void registerExistingEmail() {
         RegistrationModule obj = new RegistrationModule();
-        SignUpModule obje = new SignUpModule();
         SoftAssert sf = new SoftAssert();
         Actions action = new Actions(Driver.getDriver());
         ContactUs conUs=new ContactUs();
