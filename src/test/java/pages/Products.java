@@ -39,6 +39,21 @@ public class Products {
     @FindBy(xpath = "//b[contains(text(),'Brand')]")
     public WebElement listedFirstProductsBrand;
 
+    @FindBy(xpath = "//input[@type='text']")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "(//button)[1]")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//h2)[3]")
+    public WebElement searchedProducts;
+
+
+
+
+
+
+
 
 
 
