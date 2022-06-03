@@ -14,4 +14,25 @@ public class Cart {
 
     @FindBy(xpath ="(//a[@href='/view_cart'])[1]")
     public WebElement cartButton;
+
+    @FindBy(xpath ="(//p[contains(text(),'Rs.')])[1]")
+    public WebElement addedFirstCartPrice;
+
+    @FindBy(xpath ="(//p[contains(text(),'Rs.')])[2]")
+    public WebElement addedfirstCartPriceTotal;
+
+    @FindBy(xpath ="(//p[contains(text(),'Rs.')])[3]")
+    public WebElement addedSecondCartPrice;
+
+    @FindBy(xpath ="(//p[contains(text(),'Rs.')])[4]")
+    public WebElement addedSecondCartPriceTotal;
+
+    @FindBy(xpath = "(//button[@class='disabled'])[1]")
+    public WebElement firstAddedProductQuantity;
+
+    @FindBy(xpath = "(//button[@class='disabled'])[2]")
+    public WebElement secondAddedProductQuantity;
+
+
+
 }

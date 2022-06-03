@@ -21,6 +21,22 @@ public class Products {
     @FindBy(xpath = "//a[@href='/product_details/1']")
     public WebElement listedFirstProducts;
 
+    @FindBy(xpath = "//a[@href='/product_details/2']")
+    public WebElement listedSecondProducts;
+
+    @FindBy(xpath = "(//a[@data-product-id=1])[1]")
+    public WebElement listedFirstProductAddCart;
+
+
+    @FindBy(xpath = "(//a[@data-product-id=2])[1]")
+    public WebElement listedSecondProductAddCart;
+
+    @FindBy(xpath = "//button[@class='btn btn-success close-modal btn-block']")
+    public WebElement continueShoppingButton;
+
+    @FindBy(xpath = "//u")
+    public WebElement viewCart;
+
     @FindBy(xpath = "(//h2)[3]")
     public WebElement listedFirstProductsName;
 
@@ -47,6 +63,9 @@ public class Products {
 
     @FindBy(xpath = "(//h2)[3]")
     public WebElement searchedProducts;
+
+
+
 
 
 

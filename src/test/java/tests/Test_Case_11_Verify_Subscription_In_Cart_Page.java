@@ -70,6 +70,8 @@ public class Test_Case_11_Verify_Subscription_In_Cart_Page {
 
         sf.assertAll();
 
+        Driver.closeDriver();
+
 
 
     }
