@@ -8,9 +8,11 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.RegistrationModule;
 import utulities.ConfigReader;
+import utulities.CrossDriver;
 import utulities.Driver;
+import utulities.TestBaseCross;
 
-public class Test_Case_1_Register_User {
+public class Test_Case_1_Register_User extends TestBaseCross {
 
     @Test
     public static void test01() throws InterruptedException {
@@ -21,7 +23,7 @@ public class Test_Case_1_Register_User {
       //  2. Navigate to url 'http://automationexercise.com'
      //   3. Verify that home page is visible successfully
 
-         Driver.getDriver().get(ConfigReader.getProperty("mainPage"));
+         CrossDriver.getDriver("browser").get(ConfigReader.getProperty("mainPage"));
 
         SoftAssert sf=new SoftAssert();
 
@@ -39,7 +41,7 @@ public class Test_Case_1_Register_User {
 
         obj.newUserSignUpName.sendKeys(ConfigReader.getProperty("dogruIsim"));
 
-        JavascriptExecutor js= (JavascriptExecutor) Driver.getDriver();
+        JavascriptExecutor js= (JavascriptExecutor) CrossDriver.getDriver("browser");
 
         js.executeScript("window.scrollBy(0,150)");
         obj.newUserSignUpEmail.sendKeys(ConfigReader.getProperty("dogruEmail"));
@@ -58,7 +60,7 @@ public class Test_Case_1_Register_User {
 
         obj.inputTitle.click();
 
-        Actions action=new Actions(Driver.getDriver());
+        Actions action=new Actions(CrossDriver.getDriver("browser"));
 
         action.sendKeys(Keys.TAB).perform();
         action.sendKeys(Keys.TAB).perform();

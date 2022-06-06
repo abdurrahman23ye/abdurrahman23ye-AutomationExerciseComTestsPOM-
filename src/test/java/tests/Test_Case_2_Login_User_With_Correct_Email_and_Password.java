@@ -7,16 +7,18 @@ import org.testng.asserts.SoftAssert;
 import pages.RegistrationModule;
 import pages.SignUpModule;
 import utulities.ConfigReader;
+import utulities.CrossDriver;
 import utulities.Driver;
+import utulities.TestBaseCross;
 
-public class Test_Case_2_Login_User_With_Correct_Email_and_Password {
+public class Test_Case_2_Login_User_With_Correct_Email_and_Password extends TestBaseCross {
 
   @Test
     public  void signUp(){
         RegistrationModule obj=new RegistrationModule();
         SignUpModule obje=new SignUpModule();
         SoftAssert sf=new SoftAssert();
-        Actions action=new Actions(Driver.getDriver());
+        Actions action=new Actions(CrossDriver.getDriver("browser"));
 
          /* 1. Launch browser
 2. Navigate to url 'http://automationexercise.com'
@@ -25,7 +27,7 @@ public class Test_Case_2_Login_User_With_Correct_Email_and_Password {
 
     */
 
-        Driver.getDriver().get(ConfigReader.getProperty("mainPage"));
+      CrossDriver.getDriver("browser").get(ConfigReader.getProperty("mainPage"));
 
        sf.assertTrue( obj.mainPage.isDisplayed());
 
